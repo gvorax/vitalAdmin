@@ -47,7 +47,6 @@ const Orders = () => {
       }
     });
 
-    console.log(filtered, "filtered");
     setFilteredData(filtered);
   };
 
@@ -139,7 +138,6 @@ const Orders = () => {
         type: toast.TYPE.ERROR,
         autoClose: 3000, // Automatically close error toast after 3 seconds
       });
-      console.error("Error deleting user:", error);
     }
 
     setModal(false);
@@ -252,7 +250,7 @@ const Orders = () => {
           </div>
           <div className="tbody">
             {loading && <div className="loading">Yuklanmoqda...</div>}
-            {filteredData.length ? filteredData?.map((item, index) => (
+            {filteredData?.length ? filteredData?.map((item, index) => (
               <div
                 className="tr"
                 key={index}
@@ -277,7 +275,7 @@ const Orders = () => {
                   </Tooltip>
                 </div>
                 <div className="td">
-                  {item.status ? (
+                  {item?.status ? (
                     <p className="red">Qabul qilingan</p>
                   ) : (
                     <p className="green">Yuborilgan</p>

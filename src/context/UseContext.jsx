@@ -29,40 +29,39 @@ export function UserContextProvider({ children }) {
       autoClose: false, // Do not automatically close the pending toast
     });
 
-    let response = null;
-    response = await axios.post("https://vital.zirapcha.uz/api/admin/login", {
-      phone_number: phone,
-      password: password,
-    });
-
-    if (response.status == 201) {
-      toast.update(pendingToastId, {
-        render: "Muvaffaqiyatli o'tdi",
-        type: toast.TYPE.SUCCESS,
-        autoClose: 3000, // Automatically close success toast after 3 seconds
+    try {
+      let response = null;
+      response = await axios.post("https://vital.zirapcha.uz/api/admin/login", {
+        phone_number: phone,
+        password: password,
       });
+      if (response.status == 201) {
+        toast.update(pendingToastId, {
+          render: "Muvaffaqiyatli o'tdi",
+          type: toast.TYPE.SUCCESS,
+          autoClose: 3000, // Automatically close success toast after 3 seconds
+        });
 
-      const data = response.data.data.admin;
+        const data = response.data.data.admin;
 
-      const dataAdmin = {
-        id: data._id,
-        name: data.name,
-        phone_number: data.phone_number,
+        const dataAdmin = {
+          id: data._id,
+          name: data.name,
+          phone_number: data.phone_number,
+        };
+
+        sessionStorage.setItem("admin", JSON.stringify(dataAdmin));
+
+        localStorage.setItem("token", response.data.data.token);
+
+        setUser(dataAdmin);
       }
-      
-      sessionStorage.setItem("admin",JSON.stringify(dataAdmin));
-
-      localStorage.setItem("token", response.data.data.token);
-
-      setUser(dataAdmin);
-    } else {
-      toast.update(pendingToastId, {
+    } catch (error) {
+      return toast.update(pendingToastId, {
         render: "Nomer yoki parol xato ...",
         type: toast.TYPE.ERROR,
         autoClose: 3000, // Automatically close error toast after 3 seconds
       });
-
-      console.error("Login yoki parol xato");
     }
   };
 

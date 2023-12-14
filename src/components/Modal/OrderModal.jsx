@@ -102,7 +102,6 @@ const OrderModal = ({ onCancel, onDelete, id }) => {
         type: toast.TYPE.ERROR,
         autoClose: 3000, // Automatically close error toast after 3 seconds
       });
-      console.log(error);
     }
   };
 
@@ -124,7 +123,6 @@ const OrderModal = ({ onCancel, onDelete, id }) => {
           autoClose: 3000,
         });
       } catch (error) {
-        console.log(error, "nimaidr xato");
         toast.update(pendingToastId, {
           render: "Nimadir xato ketdi...",
           type: toast.TYPE.ERROR,
@@ -153,7 +151,6 @@ const OrderModal = ({ onCancel, onDelete, id }) => {
           autoClose: 3000,
         });
       } catch (error) {
-        console.log(error, "nimadir xato");
         toast.update(pendingToastId, {
           render: "Nimadir xato ketdi...",
           type: toast.TYPE.ERROR,

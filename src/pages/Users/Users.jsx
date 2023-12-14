@@ -78,7 +78,6 @@ const Users = () => {
         type: toast.TYPE.ERROR,
         autoClose: 3000, // Automatically close error toast after 3 seconds
       });
-      console.error("Error deleting user:", error);
     }
 
     setModal(false);

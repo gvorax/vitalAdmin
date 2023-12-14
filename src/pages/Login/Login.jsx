@@ -25,7 +25,6 @@ const Login = () => {
         await navigate("/");
       } else {
         await navigate('/login')
-        alert("Nimadir xato ketdi token");
       }
       
     } else {

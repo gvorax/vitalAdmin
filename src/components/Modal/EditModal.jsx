@@ -100,7 +100,6 @@ const EditModal = ({ setEditModal, id }) => {
 
       setCheck(!check);
     } catch (error) {
-      console.log(error,"error");
       
       toast.update(pendingToastId, {
         render: "Nimadir xato ketdi...",
@@ -151,7 +150,6 @@ const EditModal = ({ setEditModal, id }) => {
         });
       }
     } catch (error) {
-      console.log(error);
       toast.update(pendingToastId, {
         render: "Nimadir xato ketdi...",
         type: toast.TYPE.ERROR,
