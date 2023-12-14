@@ -1,0 +1,29 @@
+.app{
+    width: 100%;
+    position: relative;
+}
+.btn {
+  border-radius: 10px;
+  background: #3399db;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.4s all ease-in;
+}
+.btn:hover {
+  scale: 1.02;
+}
+
+.loading {
+  text-align: center;
+  font-size: 22px;
+  color: black;
+  font-weight: 800;
+}

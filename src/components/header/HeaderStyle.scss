@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+
+  h1 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #000;
+  }
+
+  .header_img{
+    max-width: 100px;
+
+    img{
+        width: 100%;    
+    }
+  }
+}
+
+@media screen and (max-width:1367px) {
+    .header{
+      padding: 18px 26px !important;
+      padding-bottom: 8px !important;
+      
+      h1{
+        font-size: 34px !important;
+      }
+
+      .header_img{
+        max-width: 90px !important;
+      }
+    }
+}

@@ -1,0 +1,132 @@
+.login_bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/login_bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .bg_blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(62, 62, 62, 0.4);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login_box {
+      width: 550px;
+      height: 450px;
+      border-radius: 50px;
+      background: #fff;
+      box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.25);
+      position: relative;
+      padding: 100px 80px;
+
+      .login_profile_img {
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 100px;
+        }
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .login_profile_input {
+          border-radius: 25px;
+          border: 1px solid #000;
+          background: #fff;
+          width: 100%;
+          padding: 15px 25px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          svg {
+            width: 40px;
+          }
+
+          input {
+            border: none;
+            outline: none;
+            font-size: 24px;
+          }
+        }
+
+        .login_btn {
+          width: 100%;
+          border-radius: 25px;
+          background: #000;
+          color: #fff;
+          font-size: 24px;
+          padding: 15px;
+          transition: 0.4s all ease-in-out;
+        }
+        .login_btn:hover{
+            cursor: pointer;
+            background: #fff;
+            color: #000;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:1366px) {
+  .login_box{
+    width: 500px !important;
+    height: 400px !important;
+    padding: 80px 60px !important;
+
+    .login_profile_img{
+      width: 140px !important;
+      height: 140px !important;
+      
+      svg{
+        width: 80px !important;
+      }
+    }
+
+    form{
+      gap: 46px !important;
+
+      .login_profile_input{
+        padding: 12px 22px !important;
+        gap: 18px !important;
+
+        svg{
+          width: 34px !important;
+        }
+        input{
+          font-size: 20px !important;
+        }
+      }
+
+      .login_btn{
+        font-size: 20px !important;
+        padding: 10px !important;
+      }
+    }
+  }
+}

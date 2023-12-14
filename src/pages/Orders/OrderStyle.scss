@@ -1,0 +1,259 @@
+.order_section {
+  width: 100%;
+  height: 100vh;
+
+  .order_details {
+    width: 100%;
+    padding: 0px 30px;
+
+    h2 {
+      color: #000;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .order_stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+
+      .stat_item {
+        padding: 15px 30px;
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .stat_img {
+          width: 80px;
+          height: 80px;
+          background-color: #fff0d1;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            width: 40px;
+          }
+        }
+        .item_second {
+          background: #cce5ff;
+        }
+        .item_third {
+          background: #cdf2ef;
+        }
+
+        .stat_details {
+          margin-left: 30px;
+          .stat_title {
+            color: #000;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+          }
+          .stat_subtitle {
+            color: #8f919e;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+
+  .order_table {
+    padding: 0 30px;
+    .order_button {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding: 0 20px;
+      select {
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid #8f919e;
+        background: #fff;
+        outline: none;
+      }
+      input{
+        width: 30%;
+        border-radius: 10px;
+        border: 1px solid #808080;
+        outline: none;
+        padding: 4px 16px;
+        font-size: 14px;
+      }
+    }
+
+    .order_search {
+      width: 100%;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      label {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 13px;
+      }
+      input {
+        width: 30%;
+        border-radius: 10px;
+        border: 1px solid #808080;
+        outline: none;
+        padding: 4px 16px;
+        font-size: 18px;
+      }
+    }
+
+    .table_details {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .table {
+      width: 100%;
+    }
+
+    .thead,
+    .tbody {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .tr {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      justify-items: center;
+      border-radius: 15px;
+      border: 1px solid #8f919e;
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: 0.4s all ease-in;
+    }
+
+    .tr a {
+      color: rgb(0, 219, 0);
+    }
+    .td {
+      max-width: 200px;
+      max-height: 22px;
+    }
+
+    .users .tr {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tbody {
+      height: 300px;
+      overflow-y: scroll;
+    }
+    .users {
+      height: 62vh;
+    }
+
+    .tbody .tr:hover {
+      scale: 1.03;
+      cursor: pointer;
+    }
+
+    .tbody::-webkit-scrollbar {
+      width: 5px;
+    }
+    .tbody::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+    .tbody::-webkit-scrollbar-thumb {
+      background: rgb(94, 94, 94);
+      border-radius: 10px;
+    }
+    .tbody::-webkit-scrollbar-thumb:hover {
+      background: #b30000;
+    }
+  }
+  .red {
+    color: red;
+  }
+  .green {
+    color: green;
+  }
+
+  .filterInput {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .order_details {
+    padding: 0 30px !important;
+
+    h2 {
+      font-size: 20px !important;
+      margin-top: 0 !important;
+    }
+
+    .order_stat {
+      margin: 12px 0 !important;
+
+      .stat_item {
+        padding: 12px 24px !important;
+
+        .stat_img {
+          width: 60px !important;
+          height: 60px !important;
+
+          svg {
+            width: 30px !important;
+          }
+          .stat_details {
+            margin-left: 26px !important;
+
+            .stat_title {
+              font-size: 20px !important;
+            }
+            .stat_subtitle {
+              font-size: 18px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .order_table {
+    padding: 0 26px !important;
+    .table_details {
+      margin-top: 6px !important;
+    }
+
+    .order_button {
+      select {
+        padding: 6px 12px !important;
+      }
+    }
+    .tr {
+      padding: 8px 16px !important;
+      margin-bottom: 4px;
+    }
+  }
+}
