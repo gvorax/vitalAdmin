@@ -136,7 +136,7 @@ const Users = () => {
                       </p>
                     </div>
                   </div>
-                )):<p style={{textAlign:"center",fontSize:"22px"}}>Mijozlar mavjud emas</p>}
+                )):<p style={{textAlign:"center",fontSize:"22px"}}> {!loading ? 'Mijozlar mavjud emas':null}  </p>}
               </div>
             </div>
           </div>

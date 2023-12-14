@@ -294,7 +294,7 @@ const Orders = () => {
                 </div>
                 <div className="td">{item?.product_id?.price ? item?.product_id?.price : '0'}</div>
               </div>
-            )):<p style={{textAlign:"center",fontSize:"22px"}}>Zakazlar mavjud emas</p>}
+            )):<p style={{textAlign:"center",fontSize:"22px"}}> {!loading ? 'Zakazlar mavjud emas':''}  </p>}
           </div>
         </div>
       </div>
